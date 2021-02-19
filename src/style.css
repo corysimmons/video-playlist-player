@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: sans-serif;
+  background: #000;
+  --sidebar-width: 200px;
+}
+
+main {
+  display: grid;
+  align-items: center;
+  height: 100vh;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  overflow-y: auto;
+}
+
+button {
+  width: 100%;
+  background: #222;
+  border: 0;
+  padding: 1rem 2rem;
+  color: #aaa;
+  word-wrap: break-word;
+  cursor: pointer;
+  transition: all 200ms ease;
+  outline: none;
+}
+
+button.active {
+  background: #111;
+}
+
+button:not(:last-of-type) {
+  border-bottom: 1px solid #333;
+}
+
+button:hover {
+  background: #333;
+}
+
+.vid {
+  width: calc(100vw - var(--sidebar-width));
+}
+
+video {
+  outline: none;
+}
